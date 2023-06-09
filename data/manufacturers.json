@@ -1,0 +1,78 @@
+[
+  {
+    "name": "Apple",
+    "image": "logo-apple.jpg"
+  },
+  {
+    "name": "SamSung",
+    "image": "logo-samsung.png"
+  },
+  {
+    "name": "Sony",
+    "image": "logo-sony.png"
+  },
+  {
+    "name": "Acer",
+    "image": "logo-acer-149x40.png"
+  },
+  {
+    "name": "Realme",
+    "image": "logo-realme.png"
+  },
+  {
+    "name": "Vivo",
+    "image": "logo-vivo.png"
+  },
+  {
+    "name": "Xiaomi",
+    "image": "logo-xiaomi-220x48-5.png"
+  },
+  {
+    "name": "Asus",
+    "image": "logo-asus.png"
+  },
+  {
+    "name": "AVA",
+    "image": "logo-ava.jpeg"
+  },
+  {
+    "name": "Awei",
+    "image": "logo-awei.jpg"
+  },
+  {
+    "name": "Beats",
+    "image": "logo-beats.jpg"
+  },
+  {
+    "name": "Belkin",
+    "image": "logo-belkin.jpg"
+  },
+  {
+    "name": "Dell",
+    "image": "logo-dell-149x40.png"
+  },
+  {
+    "name": "Fenda",
+    "image": "logo-Fenda.jpg"
+  },
+  {
+    "name": "Huawei",
+    "image": "logo-huawei.png"
+  },
+  {
+    "name": "Mozard",
+    "image": "logo-mozard.jpg"
+  },
+  {
+    "name": "REZO",
+    "image": "LOGO-REZO.png"
+  },
+  {
+    "name": "Xmobile",
+    "image": "logo-Xmobile.jpg"
+  },
+  {
+    "name": "JBL",
+    "image": "logo-JBL.jpg"
+  }
+]

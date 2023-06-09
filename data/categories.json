@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Phone",
+    "image": "icon-phone.png"
+  },
+  {
+    "name": "Laptop",
+    "image": "laptop.png"
+  },
+  {
+    "name": "Headphone",
+    "image": "icon-headphone.png"
+  },
+  {
+    "name": "Loudspeaker",
+    "image": "loudspeaker.png"
+  },
+  {
+    "name": "keyboard",
+    "image": "keyboard.png"
+  },
+  {
+    "name": "Charging Cable",
+    "image": "cap-sac.png"
+  },
+  {
+    "name": "Stickers/Cases Screen ",
+    "image": "danop.png"
+  }
+]

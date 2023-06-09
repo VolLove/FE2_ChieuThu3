@@ -10,21 +10,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
     <link
         href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.0/backbone-min.js"></script>
     <script src="js/models/models.js"></script>
     <script src="js/collections/collections.js"></script>
+    <script src="js/templates/templates.js"></script>
     <script src="js/views/view.js"></script>
 </head>
 
 <body>
     <header>
-
         <div class="container header-top">
             <div class="row">
                 <div class=" col-md-4 col-12">
@@ -34,7 +38,6 @@
                             <li class="list-group-item">support@gmail.com</li>
                         </ul>
                     </div>
-
                 </div>
                 <div class=" col-md-8 col-12">
                     <div class="right-content float-end">
@@ -96,33 +99,42 @@
 
     </header>
     <section>
-        <div class="container">
-            <script>
-                var peopleCollection = new PeopleCollection([
-                    {
-                        name: "Nguyen Van A",
-                        age: 25,
-                        occupation: "Designer",
-                    },
-                    {
-                        name: "Le Thi B",
-                        age: 30,
-                        occupation: "Engineer",
-                    },
-                    {
-                        name: "Tran Van C",
-                        age: 35,
-                        occupation: "Manager",
-                    },
-                ]);
+        <div class="slider" id="slider">
+            <button class="slider-btn slider-btn-right" id="btnSliderRight"><i
+                    class="fa-solid fa-arrow-right"></i></button>
+            <button class="slider-btn slider-btn-left" id="btnSliderLeft"><i
+                    class="fa-solid fa-arrow-left"></i></button>
+            <div class="slider-main" id="sliderMain">
+                <?php
 
-                var peopleView = new PeopleView({ collection: peopleCollection });
-
-                $("body").append(peopleView.el);
-
-            </script>
+                for ($i = 0; $i < 3; $i++) :
+                ?>
+                <div class="slider-item" id="sliderItem">
+                    <img class="img-bg" src="images/774-7744281_samsung-electronics-samsung-electronic-product-png.png"
+                        alt="">
+                    <div class="item title">Product</div>
+                    <div class="item price">1000000 VND</div>
+                </div>
+                <?php
+                endfor; ?>
+            </div>
         </div>
     </section>
+
+    <div class="container">
+        <div id="product-table"></div>
+
+
+        <script>
+        var products = new Products();
+        var tableProductView = new TableProductView({
+            collection: products
+        });
+        products.fetch({
+            reset: true
+        });
+        </script>
+    </div>
     <footer class="bg-dark py-5">
         <div class="container">
             <div class="main">
@@ -138,10 +150,6 @@
 
     </footer>
 </body>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-<script src="js/app.js"></script>
+<script src="js/scrip.js"></script>
 
 </html>
