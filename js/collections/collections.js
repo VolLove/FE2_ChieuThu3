@@ -1,11 +1,11 @@
-var Products = Backbone.Collection.extend({
+var ProductCollection = Backbone.Collection.extend({
   model: ProductModel,
   url: "data/products.json",
 });
-var productList = new Products();
-productList.fetch({
-  success: function () {
-    var productsToShow = productList.models.slice(0, 3);
-    console.log(productsToShow);
+var FirstThreeProducts = Backbone.Collection.extend({
+  model: ProductModel,
+  url: "data/products.json",
+  parse: function (response) {
+    return response.slice(0, 3); // Lấy 3 phần tử đầu tiên của response
   },
 });

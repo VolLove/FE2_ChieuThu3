@@ -9,3 +9,14 @@ var TableProductView = Backbone.View.extend({
     this.$el.html(html);
   },
 });
+var IndexView = Backbone.View.extend({
+  el: "#sliderMain",
+  initialize: function () {
+    this.listenTo(this.collection, "reset", this.render);
+  },
+  render: function () {
+    var template = _.template(SliderProduct);
+    var html = template({ products: this.collection.toJSON() });
+    this.$el.html(html);
+  },
+});

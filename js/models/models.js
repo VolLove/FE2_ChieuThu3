@@ -7,5 +7,6 @@ var ProductModel = Backbone.Model.extend({
     categories_id: "1",
     image: "xiaomi-redmi-12c-grey-thumb-600x600.jpg",
     price: 1584900,
+    off: 50,
   },
 });
