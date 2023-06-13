@@ -1,77 +1,91 @@
 [
   {
+    "id": 1,
     "name": "Apple",
     "image": "logo-apple.jpg"
   },
   {
+    "id": 2,
     "name": "SamSung",
     "image": "logo-samsung.png"
   },
   {
+    "id": 3,
     "name": "Sony",
     "image": "logo-sony.png"
   },
   {
+    "id": 4,
     "name": "Acer",
     "image": "logo-acer-149x40.png"
   },
   {
+    "id": 5,
     "name": "Realme",
     "image": "logo-realme.png"
   },
   {
+    "id": 6,
     "name": "Vivo",
     "image": "logo-vivo.png"
   },
   {
+    "id": 7,
     "name": "Xiaomi",
     "image": "logo-xiaomi-220x48-5.png"
   },
   {
+    "id": 8,
     "name": "Asus",
     "image": "logo-asus.png"
   },
   {
+    "id": 9,
     "name": "AVA",
     "image": "logo-ava.jpeg"
   },
   {
+    "id": 10,
     "name": "Awei",
     "image": "logo-awei.jpg"
   },
   {
+    "id": 11,
     "name": "Beats",
     "image": "logo-beats.jpg"
   },
   {
+    "id": 12,
     "name": "Belkin",
     "image": "logo-belkin.jpg"
   },
   {
+    "id": 13,
     "name": "Dell",
     "image": "logo-dell-149x40.png"
   },
   {
-    "name": "Fenda",
-    "image": "logo-Fenda.jpg"
-  },
-  {
+    "id": 14,
     "name": "Huawei",
     "image": "logo-huawei.png"
   },
   {
+    "id": 15,
     "name": "Mozard",
     "image": "logo-mozard.jpg"
   },
   {
+    "id": 16,
     "name": "REZO",
     "image": "LOGO-REZO.png"
   },
   {
+    "id": 17,
     "name": "Xmobile",
     "image": "logo-Xmobile.jpg"
   },
   {
+    "id": 18,
     "name": "JBL",
     "image": "logo-JBL.jpg"
   }

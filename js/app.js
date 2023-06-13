@@ -1,11 +1,20 @@
-window.onload = (event) => {
-  let firstslider = document.getElementById("sliderItem");
-  firstslider.classList.add("active");
-  sliderStartLoop();
-};
-
-// slider
 let slideIndex = 1;
+let tabs = document.querySelectorAll("#tab");
+let panes = document.querySelectorAll(".product-pane");
+let listBtnAddCart = document.querySelectorAll("#add-to-cart");
+window.onload = (event) => {
+  let firstslider = document.querySelector("#sliderItem");
+  firstslider.classList.add("active");
+  let tapProduct = document.querySelector("#tab-product");
+  tapProduct.getElementsByClassName("nav-link")[0].classList.add("active");
+  tabs = document.querySelectorAll("#tab");
+  panes = document.querySelectorAll(".product-pane");
+  listBtnAddCart = document.querySelectorAll("#add-to-cart");
+  productControll();
+  tabChange();
+};
+// slider
+
 //stop loop  10s when  button slider click
 //  button slider right click
 document
@@ -15,7 +24,6 @@ document
 function btnSliderRight() {
   slideIndex++;
   showSlides(slideIndex);
-  sliderStopLoop();
 }
 //  button slider left click
 document
@@ -25,7 +33,6 @@ document
 function btnSliderLeft() {
   slideIndex--;
   showSlides(slideIndex);
-  sliderStopLoop();
 }
 
 //show slider
@@ -43,27 +50,58 @@ function showSlides(n) {
   }
   sliderList[slideIndex - 1].classList.add("active");
 }
+tabs = document.querySelectorAll("#tab");
+panes = document.querySelectorAll(".product-pane");
 
-// resize slider
-window.addEventListener("resize", function (event) {
-  let widthSlider = this.document.getElementById("slider");
-  let widthSliderMain = this.document.getElementById("sliderMain");
-  let imgSlide = this.document.getElementById("imgSlide");
-  if (widthSlider.offsetWidth < 900) {
-    widthSliderMain.style.width = widthSlider.offsetWidth + "px";
-  } else widthSliderMain.style.width = "900px";
-});
-// start loop slider
-let slideLoop;
-function sliderStartLoop() {
-  slideLoop = setInterval(function () {
-    slideIndex++;
-    showSlides(slideIndex);
-  }, 3000);
+function productControll() {
+  for (let index = 0; index < tabs.length; index++) {
+    let element = tabs[index];
+    if (element.classList.contains("active")) {
+      let productTab = document.getElementById(
+        element.innerHTML.trim().replace(" ", "")
+      );
+      productTab.classList.add("active");
+      for (let i = 0; i < panes.length; i++) {
+        let pane = panes[i];
+        if (pane != productTab) {
+          if (pane.classList.contains("active")) {
+            pane.classList.remove("active");
+          }
+        }
+      }
+    }
+  }
 }
+function tabChange() {
+  for (let index = 0; index < tabs.length; index++) {
+    let element = tabs[index];
+    element.addEventListener("click", function () {
+      element.classList.add("active");
+      for (let i = 0; i < tabs.length; i++) {
+        if (i != index) {
+          tabs[i].classList.remove("active");
+        }
+      }
+      productControll();
+    });
+  }
+}
+// When the user scrolls the page, execute myFunction
+window.onscroll = function () {
+  navbarfollowscreen();
+};
 
-//stop loop slider
-function sliderStopLoop() {
-  clearInterval(slideLoop);
-  setTimeout(sliderStartLoop, 8000);
+// Get the header
+var header = document.getElementById("head-nav");
+console.log(header);
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function navbarfollowscreen() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
 }

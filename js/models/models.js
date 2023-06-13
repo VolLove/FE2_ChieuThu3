@@ -1,12 +1,20 @@
 var ProductModel = Backbone.Model.extend({
   defaults: {
-    name: "Xiaomi Redmi 12C",
-    description:
-      "New condition • No returns, but backed by eBay Money back guarantee",
-    manufacturer_id: "7",
-    categories_id: "1",
-    image: "xiaomi-redmi-12c-grey-thumb-600x600.jpg",
-    price: 1584900,
-    off: 50,
+    name: "",
+    description: "",
+    manufacturer_id: 0,
+    categories_id: 0,
+    image: "",
+    price: 0,
+    off: 0,
+    start: 0,
+    add: "2023-06-11T04:34:56.932Z",
+  },
+});
+var CategoriesModel = Backbone.Model.extend({
+  default: {
+    id: "1",
+    name: "Phone",
+    image: "icon-phone.png",
   },
 });
