@@ -15,39 +15,52 @@ window.onload = (event) => {
 };
 // slider
 
-//stop loop  10s when  button slider click
-//  button slider right click
-document
-  .getElementById("btnSliderRight")
-  .addEventListener("click", btnSliderRight);
-
 function btnSliderRight() {
   slideIndex++;
   showSlides(slideIndex);
+  let allslider = document.querySelectorAll(".slider-item");
+  for (let i = 0; i < allslider.length; i++) {
+    const element = allslider[i];
+    console.log(element);
+    element.style.animationName = "SliderHideRight";
+  }
+  document.querySelector(".slider-item.active").style.animationName =
+    "SliderShowRight";
 }
-//  button slider left click
-document
-  .getElementById("btnSliderLeft")
-  .addEventListener("click", btnSliderLeft);
 
 function btnSliderLeft() {
   slideIndex--;
   showSlides(slideIndex);
+  let allslider = document.querySelectorAll(".slider-item");
+  for (let i = 0; i < allslider.length; i++) {
+    const element = allslider[i];
+    console.log(element);
+    element.style.animationName = "SliderHideLeft";
+  }
+  document.querySelector(".slider-item.active").style.animationName =
+    "SliderShowLeft";
 }
-
+document
+  .getElementById("btnSliderRight")
+  .addEventListener("click", btnSliderRight);
+//  button slider left click
+document
+  .getElementById("btnSliderLeft")
+  .addEventListener("click", btnSliderLeft);
 //show slider
 function showSlides(n) {
   let i;
   let sliderList = document.querySelectorAll("#sliderItem");
+  for (i = 0; i < sliderList.length; i++) {
+    sliderList[i].classList.remove("active");
+  }
   if (n > sliderList.length) {
     slideIndex = 1;
   }
   if (n < 1) {
     slideIndex = sliderList.length;
   }
-  for (i = 0; i < sliderList.length; i++) {
-    sliderList[i].classList.remove("active");
-  }
+
   sliderList[slideIndex - 1].classList.add("active");
 }
 tabs = document.querySelectorAll("#tab");
@@ -72,6 +85,7 @@ function productControll() {
     }
   }
 }
+
 function tabChange() {
   for (let index = 0; index < tabs.length; index++) {
     let element = tabs[index];
@@ -93,7 +107,6 @@ window.onscroll = function () {
 
 // Get the header
 var header = document.getElementById("head-nav");
-console.log(header);
 // Get the offset position of the navbar
 var sticky = header.offsetTop;
 

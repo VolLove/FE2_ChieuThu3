@@ -1,6 +1,6 @@
 var NavBar = `
 <li class="nav-item">
-<a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+<a class="nav-link active" aria-current="page" href="index.html">Trang chủ</a>
 </li>
 <% threeCategories.forEach(function(category) { %>
 <li class="nav-item">
@@ -46,7 +46,7 @@ var singleProduct = `
             <div class="col-xl-3 col-lg-4 col-md-4 col-12">
                 <div class="single-product">
                     <div class="product-img">
-                        <a href="product/id=<%= product.id%>">
+                        <a href="product.html">
                             <img class="default-img" src="images/<%= product.image%>" alt="#">
                             <% if (product.off>0) { %>
                             <div class="off">-<%= product.off%>%</div>
@@ -57,26 +57,26 @@ var singleProduct = `
                     <div class="product-content">
                         <div class="content">
                             <div class="button">
-                                <a id="add-to-cart" href="api/cart/add"onclick="addToCart(<%= product.id%>)" class="btn">Thêm vào giỏ hàng</a>
+                                <a id="add-to-cart" href="" class="btn">Thêm vào giỏ hàng</a>
                             </div>
                             <div class="start">
                             <% if (product.start<=0) { %>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
                                 <% } else { var  x = 5 - product.start %>
                                     <% _.times(product.start, function() { %>
                                     <i class="fas fa-star check"></i>
                                     <% }); %>
                                     <% _.times(x, function() { %>
-                                        <i class="fas fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
                                         <% }); %>
                                 <% } %>
                             </div>
                             <div class="product-name">
-                                <a href="product/id=<%= product.id%>">
+                                <a href="product.html">
                                     <%= product.name%>
                                 </a>
                             </div>

@@ -80,17 +80,3 @@ var SingleProduct = Backbone.View.extend({
     this.$el.html(html);
   },
 });
-
-var CartView = Backbone.View.extend({
-  el: "#cart-list",
-
-  events: {
-    "click .add-to-cart": "addToCart",
-  },
-
-  renderCart: function (cart) {
-    // Cập nhật nội dung giỏ hàng
-    this.$(".cart-items").html(cart.items);
-    this.$(".cart-total").html(cart.total);
-  },
-});
