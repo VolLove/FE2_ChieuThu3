@@ -2,6 +2,7 @@ let slideIndex = 1;
 let tabs = document.querySelectorAll("#tab");
 let panes = document.querySelectorAll(".product-pane");
 let listBtnAddCart = document.querySelectorAll("#add-to-cart");
+// window load
 window.onload = (event) => {
   let firstslider = document.querySelector("#sliderItem");
   firstslider.classList.add("active");
@@ -13,15 +14,25 @@ window.onload = (event) => {
   productControll();
   tabChange();
 };
-// slider
 
+// .navbar-toggler
+document
+  .querySelector(".navbar-toggler")
+  .addEventListener("click", function () {
+    let listnav = document.querySelector(".collapse.navbar-collapse");
+    if (listnav.classList.contains("show")) {
+      listnav.classList.remove("show");
+    } else {
+      listnav.classList.add("show");
+    }
+  });
+// slider
 function btnSliderRight() {
   slideIndex++;
   showSlides(slideIndex);
   let allslider = document.querySelectorAll(".slider-item");
   for (let i = 0; i < allslider.length; i++) {
     const element = allslider[i];
-    console.log(element);
     element.style.animationName = "SliderHideRight";
   }
   document.querySelector(".slider-item.active").style.animationName =
@@ -34,7 +45,6 @@ function btnSliderLeft() {
   let allslider = document.querySelectorAll(".slider-item");
   for (let i = 0; i < allslider.length; i++) {
     const element = allslider[i];
-    console.log(element);
     element.style.animationName = "SliderHideLeft";
   }
   document.querySelector(".slider-item.active").style.animationName =

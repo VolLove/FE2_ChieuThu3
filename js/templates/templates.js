@@ -12,8 +12,13 @@ var NavBar = `
     Tất cả danh mục
 </a>
 <ul class="dropdown-menu" id="dropdownmenu">
-
 </ul>
+<li class="nav-item mobile">
+<a class="nav-link" href="#">Đăng nhập</a>
+</li>
+<li class="nav-item mobile">
+<a class="nav-link" href="#">Tài khoản</a>
+</li>
 </li>
 `;
 var allcategories = `
