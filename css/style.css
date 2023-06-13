@@ -22,7 +22,13 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --primal-first: #0071b5;
-  --primal-secon: #002a41;
+  --primal-second: #002a41;
+}
+.bg-primal-first {
+  background-color: var(--primal-first);
+}
+.bg-primal-second {
+  background-color: var(--primal-second);
 }
 .btn {
   background-color: var(--primal-first);
@@ -32,7 +38,7 @@
 }
 .btn:hover {
   color: white;
-  background-color: var(--primal-secon);
+  background-color: var(--primal-second);
 }
 body {
   padding: 0;
@@ -84,7 +90,7 @@ ul {
 }
 
 .header-mid .logo:hover span {
-  background-color: var(--primal-secon);
+  background-color: var(--primal-second);
 }
 .header-mid .search-bar {
   width: 80%;
@@ -132,7 +138,7 @@ ul {
   padding: 5px 20px;
 }
 .btn-search:hover {
-  background-color: var(--primal-secon);
+  background-color: var(--primal-second);
   color: white;
 }
 
@@ -144,7 +150,7 @@ ul {
   flex-wrap: nowrap;
 }
 .cart .cart-link {
-  color: var(--primal-secon);
+  color: var(--primal-second);
   font-size: 20px;
   padding: 10px;
   margin-left: 10px;
@@ -172,7 +178,7 @@ ul {
 }
 .drop-cart {
   position: absolute;
-  color: var(--primal-secon);
+  color: var(--primal-second);
   right: 0;
   top: 72px;
   width: 300px;
@@ -207,7 +213,7 @@ ul {
   border-bottom: 1px solid var(--primal-first);
 }
 .drop-cart a {
-  color: var(--primal-secon);
+  color: var(--primal-second);
   transition: all 0.3s ease 0s;
   font-weight: 600;
 }
@@ -224,15 +230,15 @@ ul {
 }
 .cart-list .cart-item .btn-delete {
   background-color: inherit;
-  border: 1px solid var(--primal-secon);
+  border: 1px solid var(--primal-second);
   font-size: 10px;
   height: 20px;
   transition: all 0.3s ease-in-out;
-  color: var(--primal-secon);
+  color: var(--primal-second);
 }
 .cart-list .cart-item .btn-delete:hover {
   color: white;
-  background-color: var(--primal-secon);
+  background-color: var(--primal-second);
 }
 .cart-item .cart-img {
   width: 100px;
@@ -359,7 +365,7 @@ footer .tech a {
 }
 .slider .slider-btn:hover {
   width: 100px;
-  background-color: var(--primal-secon);
+  background-color: var(--primal-second);
   color: white;
 }
 
@@ -448,7 +454,7 @@ footer .tech a {
   font-weight: 600;
 }
 .slider-item .price {
-  color: var(--primal-secon);
+  color: var(--primal-second);
 }
 .slider-item .btn-show {
   position: absolute;
@@ -468,7 +474,7 @@ footer .tech a {
   left: 30%;
 }
 .slider-item .btn-show:hover {
-  background-color: var(--primal-secon);
+  background-color: var(--primal-second);
 }
 .slider-item {
   position: relative;
@@ -491,7 +497,7 @@ footer .tech a {
 .slider-item .off {
   position: absolute;
   background-color: yellow;
-  color: var(--primal-secon);
+  color: var(--primal-second);
   width: 100px;
   height: 100px;
   padding: 20px;
@@ -521,7 +527,7 @@ footer .tech a {
   position: absolute;
   top: 30%;
   left: 20%;
-  background-color: var(--primal-secon);
+  background-color: var(--primal-second);
   color: white;
   font-size: 20px;
   padding: 0 20px;
@@ -534,16 +540,16 @@ footer .tech a {
   font-size: 40px;
   color: white;
   font-weight: 600;
-  border-bottom: 2px solid var(--primal-secon);
-  border-top: 2px solid var(--primal-secon);
-  background-color: var(--primal-secon);
+  border-bottom: 2px solid var(--primal-second);
+  border-top: 2px solid var(--primal-second);
+  background-color: var(--primal-second);
 }
 .product-info {
   padding-bottom: 40px;
   overflow: hidden;
 }
 .product-info a {
-  color: var(--primal-secon);
+  color: var(--primal-second);
 }
 .product-info .nav {
   justify-content: center;
@@ -561,7 +567,7 @@ footer .tech a {
   background-color: var(--primal-first);
 }
 .product-info .nav-link {
-  color: var(--primal-secon);
+  color: var(--primal-second);
   cursor: pointer;
 }
 .product-info .nav-link.active {
@@ -639,12 +645,12 @@ footer .tech a {
 }
 .product-content .button a:hover {
   color: white;
-  background-color: var(--primal-secon);
+  background-color: var(--primal-second);
 }
 
 .product-info .product-content .start {
   padding: 10px 0;
-  color: var(--primal-secon);
+  color: var(--primal-second);
 }
 
 .fas.fa-star.check {

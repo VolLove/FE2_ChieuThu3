@@ -42,7 +42,7 @@ var categoryNav = Backbone.View.extend({
     this.$el.html(html);
   },
 });
-
+//load table sản phẩm
 var TableProduct = Backbone.View.extend({
   el: "#product-info",
   initialize: function () {
